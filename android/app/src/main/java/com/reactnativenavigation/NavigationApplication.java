@@ -16,6 +16,9 @@ import com.reactnativenavigation.controllers.ActivityCallbacks;
 import com.reactnativenavigation.react.NavigationReactGateway;
 import com.reactnativenavigation.react.ReactGateway;
 
+import android.util.Log;
+import android.content.res.Configuration;
+
 import java.util.List;
 
 public abstract class NavigationApplication extends Application implements ReactApplication {
@@ -83,6 +86,17 @@ public abstract class NavigationApplication extends Application implements React
         // nothing
     }
 
+    // Added this for React Native Orientation to work 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.d("Orientation Change", "Configuration Changed");
+        Intent intent = new Intent("onConfigurationChanged");
+        intent.putExtra("newConfig", newConfig);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+    }
+
+    
     @Override
     public ReactNativeHost getReactNativeHost() {
         return reactGateway.getReactNativeHost();
