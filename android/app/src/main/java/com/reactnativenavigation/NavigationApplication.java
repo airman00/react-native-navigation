@@ -18,6 +18,7 @@ import com.reactnativenavigation.react.ReactGateway;
 
 import android.util.Log;
 import android.content.res.Configuration;
+import android.support.v4.content.LocalBroadcastManager;
 
 import java.util.List;
 
