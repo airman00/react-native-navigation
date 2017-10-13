@@ -75,7 +75,8 @@ public class NavigationActivity extends AppCompatActivity implements DefaultHard
     }
 
     private void setOrientation() {
-        OrientationHelper.setOrientation(this, AppStyle.appStyle.orientation);
+    //    OrientationHelper.setOrientation(this, AppStyle.appStyle.orientation);
+            OrientationHelper.setOrientation(this, Orientation.Landscape);
     }
 
     private void disableActivityShowAnimationIfNeeded() {
