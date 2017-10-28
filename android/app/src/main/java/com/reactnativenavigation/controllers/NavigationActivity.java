@@ -38,6 +38,7 @@ import com.reactnativenavigation.react.ReactGateway;
 import com.reactnativenavigation.screens.Screen;
 import com.reactnativenavigation.utils.OrientationHelper;
 import com.reactnativenavigation.views.SideMenu.Side;
+import com.reactnativenavigation.params.Orientation;
 
 import java.util.List;
 
